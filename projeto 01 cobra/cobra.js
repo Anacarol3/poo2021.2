@@ -11,9 +11,10 @@ let cobracor;
 let celulacor;  
 let tempo = 0;
 
-comidax = 0;
-comday = 0;
-comidacor;
+let comidax = 0;
+let comday = 0;
+let comidacor;
+let comidacount = 0;
 
 function gerarcomida (){
     comidax = parseInt(random(0, numc));
@@ -67,6 +68,7 @@ function draw (){
     cobralooping()
      if (cobrax == comidax && cobray == comiday){
     gerarcomida();
+    comidacount += 1;
      }
 
     background (255)
@@ -76,7 +78,7 @@ function draw (){
 
    fill (0);
    textSize (20);
-   text(frameCount, 10, 30)
+   text(comidacount, 10, 30)
 }
 
 function keyPressed ( ){
