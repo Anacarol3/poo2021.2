@@ -6,7 +6,7 @@
 //{
 //}
 
-class bolha {
+class Bolha {
     x: number;
     y: number;
     letra: string;
@@ -26,14 +26,40 @@ class bolha {
     draw(): void {
         fill(255)
         stroke(255)
-        circle(this.x, this.y, 2* bolha.radius)
+        circle(this.x, this.y, 2* Bolha.radius)
         fill(0)
         stroke(0)
         textSize(15)
         text(this.letra, this.x - 5, this.y + 5 )
-    }
+    } 
+} 
 
+let bolha = Bolha
+
+class Bolhas {
+    bolhas: Bolha [] = []
+    constructor (){
+    }
+    update(): void{
+
+    } 
+
+    draw(): void {
+
+
+    }
 }
+function setup() {
+    createCanvas( 800, 600);
+}
+function draw(){
+    background( 50, 50, 50)
+    let bolha = new Bolha ( 100, 100, "a", 1)
+    bolha.update() 
+    bolha.draw ()
+}
+
+
 
     
 
